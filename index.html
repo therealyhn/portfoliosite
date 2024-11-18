@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jovan Ljusic</title>
+    <link rel="icon" type="image/png" href="./images/favicon-1.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-[#000008] dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <img src="./images/header-bg-color.png" alt="header-bg-color" class="w-full">
+    </div>
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+
+        <img src="./images/logo2.png" alt="logo" class="w-28 cursor-pointer mr-14 dark:hidden">
+        <img src="./images/logo_dark_new.png" alt="logo" class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul id="menu-1" class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white
+        shadow-lg bg-opacity-50 font-Ovo
+        dark:bg-[#000008]">
+
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./images/logo-1.png" download onclick="closeMenu()"
+                    class="cursor-pointer hover:underline">Resume</a></li>
+
+        </ul>
+
+        <div class="flex items-center gap-4">
+
+            <button onclick="toggleTheme()" class="flex flex-col items-center gap-2">
+                <img src="./images/moon_icon.png" alt="dark/light mode" class="w-6 dark:hidden">
+                <p class="dark:hidden text-xs">Dark</p>
+                <img src="./images/sun_icon.png" alt="dark/light mode" class="w-6 hidden dark:block">
+                <p class="hidden dark:block text-xs">Light</p>
+            </button>
+
+            <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border-gray-500 border rounded-full ml-4 
+                hover:bg-sky-200 transition duration-500
+                font-Ovo dark:border-white/50 dark:hover:bg-darkTheme3">Contact
+                <!--<img src="./images/arrow-icon.png" class="w-3 dark:hidden">-->
+                <!--<img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block">-->
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden">
+                <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block">
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+
+        <ul id="side-menu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen
+        bg-sky-300 transition duration-500 font-Ovo dark:bg-[#2a004a] dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+                <img src="./images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li><a href="Jovan-Ljusic-CV.pdf" download onclick="closeMenu()" class="cursor-pointer">Resume</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+        <img src="./images/profile-img.png" alt="" class="rounded-full w-40 shadow-lg dark:shadow-[0_0_5px_#fff]">
+        <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3">Jovan Ljusic</h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">FRONTEND DEVELOPER</h1>
+        <p class="max-w-2xl mx-auto font-Ovo"> Let's build something great together!</p>
+
+        <div class="flex flex-col md:flex-row items-center gap-4 mt-14">
+            <a href="Jovan-Ljusic-CV.pdf" download class="px-10 py-3 border border-gray-500 rounded-full hover:bg-sky-200 transition duration-500
+            text-black flex items-center gap-2 hover:bg-gradient-to-br 
+            dark:border-transparent dark:text-white dark:bg-darkTheme3 dark:hover:bg-darkTheme2">My Resume
+                <img src="./images/download-icon.png" alt="" class="w-4 dark:hidden">
+                <img src="./images/download-icon-dark.png" alt="" class="w-4 hidden dark:block">
+            </a>
+
+            <!--             
+            <a href="./images/logo.png" download
+                class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white">My Resume
+                <img src="./images/download-icon.png" alt="" class="w-4"></a> -->
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+
+    <div id="about" class="w-full px-[12%] py-1 scroll-mt-32">
+        <h2 class="text-center text-5xl font-Ovo">About Me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-12 mt-12">
+            <div class="max-w-max mx-auto relative -top-10">
+                <img src="images/user-image-2.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+
+                <div
+                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full 
+                    translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(17,0,230,0.15)] flex items-center justify-center">
+                    <img src="images/circular-text.png" alt="" class="w-full animate-spin_slow">
+                    <img src="images/logo-no-text.png" alt="" class="absolute top-1/2 left-1/2
+                    -translate-x-1/2 -translate-y-1/2">
+                </div>
+            </div>
+
+            <div class="flex-1 mb-12">
+                <p class="mb-5 max-w-2xl font-Ovo">I am front-end developer specializing in HTML, CSS, JavaScript and
+                    React.
+                    My focus is on creating responsive, user-centric web applications. Always eager to contribute, I
+                    wish to bring
+                    my skills to innovative projects that push the boundaries of modern web development.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2 max-w-2xl">
+                    <li class="border-[1px] border-grey-500 rounded-xl p-6 cursor-pointer hover:bg-[#eefbff] hover:-translate-y-1 duration-500
+                    hover:shadow-[4px_4px_0px_#000]
+                    dark:border-white dark:hover:shadow[4px_4px_0px_#fff] dark:hover:bg-darkTheme3 dark:bg-darkTheme2">
+                        <img src="images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">HTML, CSS, JavaScript, SASS, Tailwind CSS,
+                            Bootstrap, React,
+                            Next.js</p>
+                    </li>
+                    <li class="border-[1px] border-grey-500 rounded-xl p-6 cursor-pointer hover:bg-[#eefbff] hover:-translate-y-1 duration-500
+                    hover:shadow-[4px_4px_0px_#000]
+                    dark:border-white dark:hover:shadow[4px_4px_0px_#fff] dark:hover:bg-darkTheme3 dark:bg-darkTheme2">
+                        <img src="images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Certified JavaScript Developer from
+                            ITAcademy, LinkGroup
+                            , Serbia.
+                        </p>
+                    </li>
+                    <li class="border-[1px] border-grey-500 rounded-xl p-6 cursor-pointer hover:bg-[#eefbff] hover:-translate-y-1 duration-500
+                    hover:shadow-[4px_4px_0px_#000]
+                    dark:border-white dark:hover:shadow[4px_4px_0px_#fff] dark:hover:bg-darkTheme3 dark:bg-darkTheme2">
+                        <a href="#projects"><img src="images/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                            <img src="images/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                            <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Project</h3>
+                            <p class="text-gray-600 text-sm dark:text-white/80">Built a diverse portfolio of academic
+                                and
+                                professional
+                                projects using HTML, CSS, JavaScript and React. Check out my portfolio below to see
+                                these
+                                projects
+                                in action.
+                            </p>
+                        </a>
+
+                    </li>
+                </ul>
+
+                <h4 class="my-4 text-gray-700 font-Ovo dark:text-white">Tools</h4>
+
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer
+                        hover:-translate-y-1 duration-500
+                        dark:bg-darkTheme2">
+                        <img src="images/vscode.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer
+                        hover:-translate-y-1 duration-500
+                        dark:bg-darkTheme2">
+                        <img src="images/photoshop.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer
+                        hover:-translate-y-1 duration-500
+                        dark:bg-darkTheme2">
+                        <img src="images/illustrator.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer
+                        hover:-translate-y-1 duration-500
+                        dark:bg-darkTheme2">
+                        <img src="images/figma.png" alt="" class="w-5 sm:w-7">
+                    </li>
+
+                    <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer
+                        hover:-translate-y-1 duration-500
+                        dark:bg-darkTheme2">
+                        <img src="images/git.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+
+    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20 lg:mt-24">
+        <h2 class="text-center text-5xl font-Ovo">Projects</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo">
+            Finally, here's my portfolio - a glimpse into my journey as web developer. Curious to know more? Don't
+            hesitate to
+            <a href="#contact" class="font-semibold text-[#0C83BA]">get in touch</a>
+
+        </p>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-proj mt-0 mb-2 gap-5">
+            <!-- First 3 Projects (Initially Visible) -->
+            <div onclick="window.open('https://djeventplanner.jovanljusic.com')" class="project-item aspect-square bg-[url('./images/dj_event_planner/planner_2.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border 
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">DJ Event Planner App</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">Solo Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="window.open('https://image-searcher.jovanljusic.com')" class="project-item aspect-square bg-[url('./images/image_searcher/image_searcher.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">Image Searcher App</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">Solo Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="window.open('https://madara-vs-shinobi-alliance.jovanljusic.com')" class="project-item aspect-square bg-[url('./images/madara_vs_shinobis/madara.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">Run &amp; Jump Game</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">School/Solo Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Projects (Initially Hidden) -->
+            <div onclick="window.open('https://weather-app.jovanljusic.com')" class="project-item hidden aspect-square bg-[url('./images/weather_checker/weather_checker.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">Weather App</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">Solo Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="window.open('https://phone-book.jovanljusic.com')" class="project-item hidden aspect-square bg-[url('./images/phone_book/phone_book.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">Phone Book App</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">School React Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="window.open('https://to-do-list-app.jovanljusic.com')" class="project-item hidden aspect-square bg-[url('./images/to_do_list/to_do.png')] 
+                bg-no-repeat bg-cover bg-center border border-gray-700 rounded-lg relative cursor-pointer group">
+                <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 
+                    -translate-x-1/2 py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 shadow-lg border-gray-700 border
+                    dark:bg-[#0C83BA] dark:hover:bg-darkTheme3">
+                    <div>
+                        <h2 class="font-semibold dark:text-white">To Do List App</h2>
+                        <p class="text-sm text-gray-700 dark:text-gray-100">School React Project</p>
+                    </div>
+                    <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] group-hover:bg-sky-200 transition
+                        dark:bg-white dark:border-white">
+                        <img src="images/send-icon.png" alt="Send Icon" class="w-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show More Button -->
+        <button id="showMoreBtn" class="w-max flex items-center justify-center gap-2 text-gray-700 
+            border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-5 hover:bg-[#adecff] duration-500
+            dark:text-white dark:border-transparent dark:hover:bg-darkTheme3 dark:bg-darkTheme2">
+            Show More
+            <img src="images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+            <img src="images/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
+        </button>
+    </div>
+
+    <!-- Contact  -->
+
+    <div id="contact" class="w-full px-[12%] pb-10 pt-8 scroll-mt-24 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[lenght:90%_auto] bg-center mt-20
+        dark:bg-none">
+        <h2 class="text-center text-5xl font-Ovo">Get In Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+            I'm actively exploring new job opportunities and exciting projects. My inbox is always open, so whether you
+            have a question,
+            a collaboration in mind or just want to say hello, feel free to reach out.
+        </p>
+
+        <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+
+            <input type="hidden" name="access_key" value="e18f6b39-62d2-4ec3-b788-295cc055427f">
+
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-5">
+                <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+                    dark:bg-darkTheme2 dark:border-white/90" name="name" required>
+                <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white'
+                    dark:bg-darkTheme2 dark:border-white/90" name="email" required>
+            </div>
+            <textarea rows="6" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+                dark:bg-darkTheme2 dark:border-white/90" name="message" required></textarea>
+
+            <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto mt-5
+            hover:bg-black duration-500
+            dark:bg-darkTheme2 dark:hover:bg-darkTheme3 dark:border-white/50">
+                Connect
+                <img src="images/right-arrow-white.png" alt="" class="w-4 ">
+            </button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="mt-10">
+        <div class="text-center">
+            <img src="images/logo2.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+            <img src="images/logo_dark_new.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <a href="mailto:contact@jovanljusic.com" class="hover:underline">contact@jovanljusic.com</a>
+            </div>
+        </div>
+
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>Copyright &copy; 2024 Jovan Ljusic. All rights reserved.</p>
+            <ul class="flex  items-center gap-10 justify-center mt-4 sm:mt-0">
+                
+                <li class="flex items-center gap-2 cursor-pointer" onclick="window.open('https://www.instagram.com/jovanljusic_asdf')">
+                    <img src="images/instagram.png" alt="" class="w-6">
+                    <p class="hidden sm:block">Instagram</p>
+                </li>
+
+                <li class="flex items-center gap-2 cursor-pointer" onclick="window.open('https://www.linkedin.com/in/jovan-ljusic')">
+                    <img src="images/linkedin.png" alt="" class="w-6">
+                    <p class="hidden sm:block">Linkedin</p>
+                </li>
+
+                <li class="flex items-center gap-2 cursor-pointer" onclick="window.open('https://github.com/therealyhn')">
+                    <img src="images/github.png" alt="" class="w-6">
+                    <p class="hidden sm:block">GitHub</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./script1.js"></script>
+</body>
+
+</html>
